@@ -1,0 +1,11 @@
+This demonstrates incorrect behaviour when using pyramid.threadlocal with
+gunicorn and eventlet.
+
+Steps to reproduce:
+1. Install and run this pyramid app with `pserve development.ini`
+2. Connect to it with a web browser
+3. While the first tab is loading, launch a second tab for the same URL
+4. While they are both still loading, close the first tab
+
+Observe: the requests returned by `get_current_request()` are mixed up with
+respect to the requests passed into the view callable.
