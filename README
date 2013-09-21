@@ -9,3 +9,5 @@ Steps to reproduce:
 
 Observe: the requests returned by `get_current_request()` are mixed up with
 respect to the requests passed into the view callable.
+
+See https://github.com/Pylons/pyramid/issues/1125
