@@ -1,3 +1,6 @@
+import eventlet
+eventlet.monkey_patch()
+
 from pyramid.config import Configurator
 from pyramid.response import Response
 from pyramid.threadlocal import get_current_request
